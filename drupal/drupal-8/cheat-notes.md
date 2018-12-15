@@ -1,6 +1,6 @@
 # Cheat Notes
 
-#### D8 Modules Structure:
+#### D8 Modules Structures:
 
 * module in `.info.yml`
 * routes in `.routing.yml`
