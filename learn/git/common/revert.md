@@ -22,7 +22,7 @@ git reset --hard "commit-hash"
 git stash pop
 ```
 
-#### Temporary switch to a commit 
+#### Temporarily switch to a specific commit 
 
 There are times when we want to revert to a specific commit and try out the code or add few changes for testing.
 
@@ -31,7 +31,9 @@ There are times when we want to revert to a specific commit and try out the code
 git checkout "commit-hash"
 ```
 
-Then we can temporarily try out code at this specific commit or we can create a new branch from this commit and work on it.
+#### Branch off from a specific commit
+
+We can temporarily try out code at this specific commit or we can create a new branch from this commit and work on it.
 
 ```text
 # Create a branch from a specific commit point

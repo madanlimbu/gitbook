@@ -11,8 +11,8 @@
       * [Custom block](learn/drupal/drupal-7/custom-block.md)
       * [Render Arrays](learn/drupal/drupal-7/render-arrays.md)
   * [Git](learn/git/README.md)
-    * [Common](learn/git/common.md)
-* [Revert](revert.md)
+    * [Common](learn/git/common/README.md)
+      * [Revert](learn/git/common/revert.md)
 
 ## Personal
 
