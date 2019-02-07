@@ -42,3 +42,9 @@ git rebase origin/[branchname]
 git diff origin/[branchname] > [project-name]-[short-description]-[issue-number]-[comment-number].patch
 ```
 
+7\) Apply the patch 
+
+```text
+git apply patch-name.patch
+```
+
