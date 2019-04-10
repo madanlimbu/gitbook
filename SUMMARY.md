@@ -12,6 +12,7 @@
       * [Custom block](learn/drupal/drupal-7/custom-block.md)
       * [Render Arrays](learn/drupal/drupal-7/render-arrays.md)
       * [Custom Drush Command](learn/drupal/drupal-7/drush-command.md)
+      * [Drush make](learn/drupal/drupal-7/drush-make.md)
   * [Git](learn/git/README.md)
     * [Drupal patching](learn/git/drupal-patching.md)
     * [Revert](learn/git/revert.md)
