@@ -51,7 +51,7 @@ git revert HEAD~"n"
 # Reverting a range of commmits
 git revert <start_commit_hash>..<end_commit_hash>
 
-# Revert a merge commit
+# Revert a merge commit ( -m 1 message tells git to go back to first commit before the merge )
 git revert -m 1 <merge_commit_hash>
 
 # Revert some commits at once
