@@ -2,7 +2,5 @@
 description: Simple learning notes
 ---
 
-# Madan notes2
-
-
+# Madan notes
 

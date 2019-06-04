@@ -4,7 +4,7 @@ description: Common usage of 'git revert'
 
 # Revert
 
-#### Reverting back to a specific commit
+## Reverting back to a specific commit
 
 Reseting back to specific commit, we need to be careful as this will also remove all local changes.
 
@@ -12,9 +12,9 @@ Reseting back to specific commit, we need to be careful as this will also remove
 git reset --hard <commit_hash>
 ```
 
-#### Keeping few local changes  while reverting
+## Keeping few local changes  while reverting
 
-There are times when we want to keep some local changes while reverting. we can use stash to keep the local changes and put those local changes to a commit. 
+There are times when we want to keep some local changes while reverting. we can use stash to keep the local changes and put those local changes to a commit.
 
 ```text
 git stash
@@ -22,7 +22,7 @@ git reset --hard <commit_hash>
 git stash pop
 ```
 
-#### Temporarily switch to a specific commit 
+## Temporarily switch to a specific commit
 
 There are times when we want to revert to a specific commit and try out the code or add few changes for testing.
 
@@ -31,7 +31,7 @@ There are times when we want to revert to a specific commit and try out the code
 git checkout <commit_hash>
 ```
 
-#### Branch off from a specific commit
+## Branch off from a specific commit
 
 We can temporarily try out code at this specific commit or we can create a new branch from this commit and work on it.
 
@@ -40,7 +40,7 @@ We can temporarily try out code at this specific commit or we can create a new b
 git checkout -b <branch_name> <commit_hash>
 ```
 
-#### Reverting strategies
+## Reverting strategies
 
 There are some few ways to revert in git.
 
@@ -58,7 +58,7 @@ git revert -m 1 <merge_commit_hash>
 git revert <commit_hash_1> <commit_hash_2> <commit_has_3>
 ```
 
-#### _**References:**_
+## _**References:**_
 
 * [Undo pushed merge](https://www.christianengvall.se/undo-pushed-merge-git/)
 * [Git revert Manuals](http://schacon.github.io/git/git-revert.html)

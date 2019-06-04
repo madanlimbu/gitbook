@@ -17,7 +17,3 @@
     * [Drupal patching](learn/git/drupal-patching.md)
     * [Revert](learn/git/revert.md)
 
-## Personal
-
-* [AI](personal/ai.md)
-
