@@ -9,11 +9,13 @@
       * [Custom Drush](learn/drupal/drupal-8/drush-command.md)
       * [Form API](learn/drupal/drupal-8/form-api.md)
     * [Drupal 7](learn/drupal/drupal-7/README.md)
+      * [Cheat Notes](learn/drupal/drupal-7/cheat-notes.md)
       * [Custom block](learn/drupal/drupal-7/custom-block.md)
       * [Render Arrays](learn/drupal/drupal-7/render-arrays.md)
       * [Custom Drush Command](learn/drupal/drupal-7/drush-command.md)
       * [Drush make](learn/drupal/drupal-7/drush-make.md)
   * [Git](learn/git/README.md)
+    * [Gitflow](learn/git/gitflow.md)
     * [Drupal patching](learn/git/drupal-patching.md)
     * [Revert](learn/git/revert.md)
 
