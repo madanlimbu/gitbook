@@ -18,4 +18,12 @@
     * [Gitflow](learn/git/gitflow.md)
     * [Drupal patching](learn/git/drupal-patching.md)
     * [Revert](learn/git/revert.md)
+* [Random](random/README.md)
+  * [Wordpress](random/wordpress/README.md)
+    * [Permissions](random/wordpress/permissions-in-wordpress-file-system.md)
+  * [Apache](random/apache/README.md)
+    * [Setting up Apache Server](random/apache/setting-up-apache-server.md)
+    * [VirtualBox Sharing file](random/apache/virtualbox-sharing-file.md)
+  * [Linux](random/linux/README.md)
+    * [Systemd Startup Script](random/linux/systemd-startup-script.md)
 
