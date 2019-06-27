@@ -20,6 +20,21 @@ There are times when we want to keep some local changes while reverting. we can 
 git stash
 git reset --hard <commit_hash>
 git stash pop
+
+#or 
+
+#reset but keep the local changes (if ~x is ~2, it will reset 2nd commit from the bottom)
+git reset HEAD~x
+
+#or 
+
+#Undo last commit, but keep the changes (--soft)
+git reset HEAD~
+
+#or
+
+#Revert last commit and rollback the changes:
+git reset --hard HEAD~
 ```
 
 ## Temporarily switch to a specific commit
