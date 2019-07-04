@@ -24,6 +24,7 @@
 * [Random](random/README.md)
   * [Python/Django](random/python-django/README.md)
     * [Pythonism](random/python-django/pythonism.md)
+    * [Django](random/python-django/untitled.md)
   * [Creating Old School Javascript Plugins](random/creating-old-school-javascript-plugins.md)
   * [Wordpress](random/wordpress/README.md)
     * [Permissions](random/wordpress/permissions-in-wordpress-file-system.md)

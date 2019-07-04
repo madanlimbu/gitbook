@@ -1,6 +1,10 @@
+---
+description: 'Brief read on python - https://www.python.org/'
+---
+
 # Pythonism
 
-### Overview
+## Overview
 
 * Files end with `.py` 
 * Uses _**indentation**_ to indicate block
@@ -15,9 +19,28 @@
 * Set of built-in string util methods [https://www.w3schools.com/python/python\_ref\_string.asp](https://www.w3schools.com/python/python_ref_string.asp)
 * logical operator uses \(`and` `or` `not()` \)
 *  `is` and `is not` operator can be used to check if object are same and they point to same memory location 
-* `in` and `not in` operator can be used to check if a sequence exist inside another variableC
+* `in` and `not in` operator can be used to check if a sequence exist inside another variable
+* function defined using `def` 
+* has lambda \(anonymous function\) feature
+  * `lambda arguments : expression` 
+  * \(need to use keyword `lambda`\) `x = lambda a : a + 1` 
+* Uses `try` `except` `finally` for `try catch finally` 
+* PIP used as package management [https://pypi.org/](https://pypi.org/)
+* `format()` method used to format string. ie. to have a place holder in string  
 
-### Collections
+{% code-tabs %}
+{% code-tabs-item title="format-example.py" %}
+```python
+name = "madan"
+greet = "Hello, {}" 
+
+#prints Hello, madan.
+print(greet.format(name)   
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+#### **Collections**
 
 * **List** is a collection which is ordered and changeable. Allows duplicate members. \(_Like_ `array`\)
   * `["example", "of", "list"]`
@@ -31,5 +54,95 @@
   * {"name": "example", "second\_name": "of", "last\_name": "dictionary"}
   * Key and Value mapping
 
+## Object Orientation
 
+#### Class
+
+Uses `class` keyword to declare class, `class x:` 
+
+Classes have a built-in function \(_constructor\)_ `__init__()` called when the object is being created. 
+
+`self` parameter naming convention is used for reference to current instance of class \(similar to  `this` in other languages\), however it can be any name but has to be the first parameter in any method inside the class.
+
+Classes can have their own methods.
+
+`del` keyword can be used to deleted a object property or the object itself
+
+```python
+class Life:
+    def __init__(self, name):
+        self.name = name
+        
+    def lifeupdate(self):
+        print("Hello, name is " + self.name)
+
+# create new object using class        
+newLife = Life("madan")
+
+# assign new value to property
+newLife.name = "apple"
+
+# del property form object
+del newLife.name
+
+# del object itself
+del newLife
+
+```
+
+#### Inheritance
+
+To inherit a _**parent**_ class by _**child**_ class in python, we need to send the _**parent**_ class as a parameter in _**child**_ class.
+
+`pass` is keyword used to tell python that nothing should be there.
+
+It can be used after the function to give an empty function or after the class to act as a placeholder.  After declaring function/class, if we leave the next line/block empty, python will throw `IndentationError` 
+
+Hence, we can use `pass` keyword when we don't want to add any other properties or methods to the class
+
+```python
+class GoodLife(Life):
+    pass
+```
+
+Similar to other language, we can use the constructor function and call parent function \(like `super.parentFn()`\)
+
+```python
+class OkayLife(Life):
+    def __init__(self, name):
+        #calling parent constructor fn to keep the inheritance
+        Life.__init__(self, name, ourdreamproperty)
+        #sepecific property of okaylife class
+        self.dream = ourdreamproperty
+```
+
+## Module
+
+In python module can be considered as just any file containing a set of functions or variables which we can include in our code. 
+
+When using the module:
+
+* import the module `import mymodule`
+* use `modulename.modulefunctionname` syntax to use the function
+* we can also use alias to a module by using `as` keyword `import mymodule as universe` 
+* we can also import parts of module using `from` keyword `from mymodule import earth` , also we won't have to prefix with module name whilst using `from` keyword to import only a specific part of module
+* 
+{% code-tabs %}
+{% code-tabs-item title="mymodule.py" %}
+```python
+def firework(sound):
+    print("Firework sound: " + sound)
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+{% code-tabs %}
+{% code-tabs-item title="myapp.py" %}
+```python
+import mymodule
+
+mymodule.firework("Quack quack")
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
