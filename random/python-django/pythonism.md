@@ -7,7 +7,7 @@ description: 'Brief read on python - https://www.python.org/'
 ## Overview
 
 * Files end with `.py` 
-* Uses _**indentation**_ to indicate block
+* Uses _**indentation**_ to indicate block scope
 * Dynamically typed variables and created only after value is assigned to it
 * Can use `""` or `''` for string variables
 * Comment with `#` 
