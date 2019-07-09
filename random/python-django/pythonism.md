@@ -40,6 +40,12 @@ print(greet.format(name)
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+In python we can pass a special symbol on argument to represent arguments that could be in any number. These are `*args` and `**kwars` .
+
+`*args` represents all the arguments that don't have key/value \(tuples\) pair. 
+
+`**kwars` represents all the arguments with `key=value` \(dictionary\) pairs.
+
 #### **Collections**
 
 * **List** is a collection which is ordered and changeable. Allows duplicate members. \(_Like_ `array`\)

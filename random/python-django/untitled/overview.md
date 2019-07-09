@@ -57,6 +57,65 @@ user.delete() #deletes the user
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+#### Serializers
+
+Serializers helps convert complex data \(querysets and model instances\) to native Python datatypes which can be easily rendered into `JSON` , `XML` or other content types and vice versa \( deserialization \).
+
+Django RESET framework provides `Serializer` and `ModelSerializer` class which helps accomplish this. 
+
+{% code-tabs %}
+{% code-tabs-item title="serializer.py" %}
+```python
+from django.db import models
+from reset_framework import serializers
+from reset_framework.parser import JSONParser
+
+class Person(model.Model):
+    def __init__(self, name):
+        self.name = name
+        
+    def create(self, validated_data):
+        return Person.objects.create(**validated_data)
+        
+    def update(self, instance, validated_data):
+        instance.name = validated_data.get('name', instance.name)
+        instance.save()
+        return instance
+
+class PersonSerializer(serializers.Serializer):
+    name = serializers.TextField(blank=True)
+    
+    def create(self, validated_data):
+        return Person(**validated_data)
+    
+    def update(self, instance, validated_data):
+        instance.name = validated_data.get('name', instance.name)
+        return instance
+
+person = Person(name='madan')
+personSer = PersonSerializer(person)
+personSer.data
+# {'name': 'madan'}
+
+#Deserializing  
+json = "{'name': 'madan'}"
+data = JSONParser().parse(json) #parse into Python native datatypes
+
+#restore native datatypes into a dictionary of validated data
+serializer = PersonSerializer(data=data)
+serializer.is_valid()
+serializer.validated_data
+# {'name': 'madan'}
+
+person = serializer.save() #back to obj instance
+
+#save() fnc will call update or create depending on data passed.
+serializer = PersonSerializer(data=data) # create()
+serializer = PersonSerializer(person, data=data) # update()
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
 ### Migrations
 
 In Django, Migrations is a way of propagating changes from models to database schema.
