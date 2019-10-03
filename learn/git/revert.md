@@ -37,6 +37,14 @@ git reset HEAD~
 git reset --hard HEAD~
 ```
 
+#### Git reset can be used to reset to any branch / history
+
+```text
+#Reset local branch to origin/remote branch
+git fetch origin
+git reset --hard origin/develop
+```
+
 ## Temporarily switch to a specific commit
 
 There are times when we want to revert to a specific commit and try out the code or add few changes for testing.
