@@ -22,7 +22,7 @@
     * [Git IncludeIf](learn/git/git-includeif.md)
     * [Gitflow](learn/git/gitflow.md)
     * [Drupal patching](learn/git/drupal-patching.md)
-    * [Revert](learn/git/revert.md)
+    * [Revert/Resting](learn/git/revert.md)
   * [Python/Django](learn/python-django/README.md)
     * [Pythonism](learn/python-django/pythonism.md)
     * [Django](learn/python-django/untitled/README.md)

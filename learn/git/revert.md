@@ -2,9 +2,9 @@
 description: Common usage of 'git revert'
 ---
 
-# Revert
+# Revert/Resting
 
-## Reverting back to a specific commit
+## Resting back to a specific commit
 
 Reseting back to specific commit, we need to be careful as this will also remove all local changes.
 
@@ -12,9 +12,9 @@ Reseting back to specific commit, we need to be careful as this will also remove
 git reset --hard <commit_hash>
 ```
 
-## Keeping few local changes  while reverting
+## Keeping few local changes  while reseting
 
-There are times when we want to keep some local changes while reverting. we can use stash to keep the local changes and put those local changes to a commit.
+There are times when we want to keep some local changes while reseting. we can use stash to keep the local changes and put those local changes to a commit.
 
 ```text
 git stash
@@ -80,6 +80,12 @@ git revert -m 1 <merge_commit_hash>
 # Revert some commits at once
 git revert <commit_hash_1> <commit_hash_2> <commit_has_3>
 ```
+
+### Difference Revert vs Reset
+
+**Reset** will clean up the git log history and make it seem like the commit didn't exist. However **Revert** will create a new commit which will undo the commit we want gone. 
+
+It is **best to use Revert** instead of Reset if the changes has already been pushed to remote origin and pulled by someone else. 
 
 ## _**References:**_
 
