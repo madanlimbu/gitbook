@@ -2,6 +2,7 @@
 
 * [Madan notes](README.md)
 * [Learn](learn/README.md)
+  * [Untitled](learn/untitled.md)
   * [Drupal](learn/drupal/README.md)
     * [Drupal 8](learn/drupal/drupal-8/README.md)
       * [Permissions](learn/drupal/drupal-8/permissions.md)
@@ -29,6 +30,7 @@
       * [Tools](learn/python-django/untitled/tools.md)
       * [Overview](learn/python-django/untitled/overview.md)
 * [Random](random/README.md)
+  * [OD](random/od.md)
   * [Debugging](random/debugging/README.md)
     * [PHP](random/debugging/php/README.md)
       * [Cheats/Hacks](random/debugging/php/cheats-hacks.md)
