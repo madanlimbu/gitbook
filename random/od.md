@@ -27,7 +27,7 @@
 * In Default config file field add: `/opt/project/phpunit.xml` 
 * Edit configuration for PHPStrom Test and add the Interpreter we created above
 
+![Test Frameworks](../.gitbook/assets/screenshot-2019-10-25-at-10.45.25.png)
 
-
-
+![Interpreters](../.gitbook/assets/screenshot-2019-10-25-at-10.46.57.png)
 
