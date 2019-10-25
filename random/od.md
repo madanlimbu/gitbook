@@ -31,3 +31,30 @@
 
 ![Interpreters](../.gitbook/assets/screenshot-2019-10-25-at-10.46.57.png)
 
+#### Using local core / webchat modules
+
+we have `composer-dev.json` which should always be kept up to date with `composer.json`.
+
+To use local `opendialogai/core` or `opendialogai/webchat` we can clone these repo in same directory level as `opendialogai/opendialog` .
+
+* `git clone git@github.com:opendialogai/opendialog.git opendialog`
+* `git clone git@github.com:opendialogai/core.git opendialog-core` 
+* `git cloen git@github.com:opendialogai/webchat opendialog-webchat` 
+
+This should create follow directory structure: 
+
+```text
+- opendialog
+    - comopser-dev.json
+- opendialog-core
+- opendialog-webchat
+```
+
+To use local version of `core` or `webchat` we can let composer know we want to use `composer-dev.json` file by setting `COMPOSER` value.
+
+`env COMPOSER=composer-dev.json composer install` 
+
+`env COMPOSER=composer-dev.json composer update opendialogai/core` 
+
+
+
