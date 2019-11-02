@@ -35,6 +35,7 @@
     * [Creating Custom Converstation](random/od/creating-custom-converstation.md)
   * [Debugging](random/debugging/README.md)
     * [PHP](random/debugging/php/README.md)
+      * [PHPUnit Test](random/debugging/php/phpunit-test.md)
       * [Cheats/Hacks](random/debugging/php/cheats-hacks.md)
   * [Creating Old School Javascript Plugins](random/creating-old-school-javascript-plugins.md)
   * [Wordpress](random/wordpress/README.md)
