@@ -1,4 +1,4 @@
-# OD
+# Setups
 
 #### Setting up locally 
 
