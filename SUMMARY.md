@@ -30,6 +30,7 @@
       * [Tools](learn/python-django/untitled/tools.md)
       * [Overview](learn/python-django/untitled/overview.md)
 * [Random](random/README.md)
+  * [Helper](random/helper.md)
   * [OD](random/od/README.md)
     * [Creating Custom Converstation](random/od/creating-custom-converstation.md)
   * [Debugging](random/debugging/README.md)
