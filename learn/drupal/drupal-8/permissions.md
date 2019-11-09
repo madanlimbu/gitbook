@@ -4,16 +4,16 @@ In Drupal 8 the `hook_permission()` to create permission has been replaced by `m
 
 #### Static Permission
 
-{% code-tabs %}
-{% code-tabs-item title="mymodule.permissions.yml" %}
+{% tabs %}
+{% tab title="mymodule.permissions.yml" %}
 ```yaml
 my custom permission:
     title: 'My custom module permission'
     description: 'This is a custom module permission'
     restrict access: TRUE
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 #### Dynamic Permission
 
@@ -23,17 +23,17 @@ Sometimes we might require to create a permission during runtime as it might dep
 
 We can define a callback in `.permissions.yml` file which will return a list of dynamic permissions.
 
-{% code-tabs %}
-{% code-tabs-item title="mymodule.permissions.yml" %}
+{% tabs %}
+{% tab title="mymodule.permissions.yml" %}
 ```yaml
 permission_callbacks:
     - Drupal\mymodule\MyModulePermissions::permissions
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="mymodule/MyModulePermissions.php" %}
+{% tabs %}
+{% tab title="mymodule/MyModulePermissions.php" %}
 ```php
 class MyModulePermissions {
     public function permissions() {
@@ -49,6 +49,6 @@ class MyModulePermissions {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 

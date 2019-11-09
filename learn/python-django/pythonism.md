@@ -28,8 +28,8 @@ description: 'Brief read on python - https://www.python.org/'
 * PIP used as package management [https://pypi.org/](https://pypi.org/)
 * `format()` method used to format string. ie. to have a place holder in string  
 
-{% code-tabs %}
-{% code-tabs-item title="format-example.py" %}
+{% tabs %}
+{% tab title="format-example.py" %}
 ```python
 name = "madan"
 greet = "Hello, {}" 
@@ -37,8 +37,8 @@ greet = "Hello, {}"
 #prints Hello, madan.
 print(greet.format(name)   
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 In python we can pass a special symbol on argument to represent arguments that could be in any number. These are `*args` and `**kwars` .
 
@@ -133,22 +133,22 @@ When using the module:
 * we can also use alias to a module by using `as` keyword `import mymodule as universe` 
 * we can also import parts of module using `from` keyword `from mymodule import earth` , also we won't have to prefix with module name whilst using `from` keyword to import only a specific part of module
 * 
-{% code-tabs %}
-{% code-tabs-item title="mymodule.py" %}
+{% tabs %}
+{% tab title="mymodule.py" %}
 ```python
 def firework(sound):
     print("Firework sound: " + sound)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="myapp.py" %}
+{% tabs %}
+{% tab title="myapp.py" %}
 ```python
 import mymodule
 
 mymodule.firework("Quack quack")
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
