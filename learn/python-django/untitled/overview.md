@@ -10,8 +10,7 @@ Django comes with an Object relational mapper \(ORM\) to describe and manipulate
 
 Model are subclass of `django.db.models.Model` 
 
-{% tabs %}
-{% tab title="" %}
+{% code title="" %}
 ```python
 from django.db import models
 
@@ -26,8 +25,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Django also provide database-access API. 
 
@@ -35,8 +33,7 @@ Model represents a Database-table and a record/row in table represents an instan
 
 Each model represents by a class that subclasses `django.db.models.Model` and Each field is represented by an instance of  a `Field` class.
 
-{% tabs %}
-{% tab title="app/post/db.py" %}
+{% code title="app/post/db.py" %}
 ```python
 from .models import User
 
@@ -58,8 +55,7 @@ Post.objects.filter(user__name__startswith='madan') #gets post by user whose nam
 
 user.delete() #deletes the user
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 #### Serializers
 
@@ -67,8 +63,7 @@ Serializers helps convert complex data \(querysets and model instances\) to nati
 
 Django RESET framework provides `Serializer` and `ModelSerializer` class which helps accomplish this. 
 
-{% tabs %}
-{% tab title="serializer.py" %}
+{% code title="serializer.py" %}
 ```python
 from django.db import models
 from reset_framework import serializers
@@ -117,8 +112,7 @@ person = serializer.save() #back to obj instance
 serializer = PersonSerializer(data=data) # create()
 serializer = PersonSerializer(person, data=data) # update()
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ### Migrations
 
@@ -170,8 +164,7 @@ The callback function gets a request object \(request metadata\) and the values 
 
 The convention is put callback function inside `views.py` 
 
-{% tabs %}
-{% tab title="app/post/urls.py" %}
+{% code title="app/post/urls.py" %}
 ```python
 from django.urls import path, url, include
 
@@ -191,11 +184,9 @@ urlpatterns = [
 ]
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="app/test\_app.urls.py" %}
+{% code title="app/test\_app.urls.py" %}
 ```python
 from django.urls import path
 
@@ -205,8 +196,7 @@ urlpatterns = [
 ]
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ```python
 #use case for unique url name
@@ -222,8 +212,7 @@ def redirect_to_title(request):
 
 view/callback are responsible for returning an `HttpResponse` object with request page contents or `Http404` on error.
 
-{% tabs %}
-{% tab title="app/post/views.py" %}
+{% code title="app/post/views.py" %}
 ```python
 from django.shortcuts import render
 from .models import Post
@@ -239,8 +228,7 @@ def post_title(request, title):
     return render(request, 'post/title.html', context)
     
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ### Template
 
@@ -273,8 +261,7 @@ Templates are name-spaced by putting templates inside another sub-directory name
 
 This way even if there is two template with same name, Template loaders  can know how to find right template by just using `app_name/index.html` .
 
-{% tabs %}
-{% tab title="app/views.py" %}
+{% code title="app/views.py" %}
 ```python
 from django.http import HttpResponse
 from django.template import loader
@@ -289,15 +276,13 @@ def index(request):
     return HttpResponse(template.render(context, request))
     
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 #### Template syntax
 
 variables surrounded by double-curly braces `{{ post.titl }}` . Can use filter by piping variables `{{ post.date|date:"F j, Y" }}` . can write custom template filters and template tags. Also has template inheritance feature \`{% extends "base.html" %} \( loads base blocks and fills the blocks with following templates \) 
 
-{% tabs %}
-{% tab title="app/post/templates/post/title.html" %}
+{% code title="app/post/templates/post/title.html" %}
 ```python
 {% extends "base.html" %}
 
@@ -307,11 +292,9 @@ variables surrounded by double-curly braces `{{ post.titl }}` . Can use filter b
 <h4>Posts title is {{ title }}</h4>
 {% endblock %}
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="app/templates/base.html" %}
+{% code title="app/templates/base.html" %}
 ```python
 {% load static %}
 <html>
@@ -322,8 +305,7 @@ variables surrounded by double-curly braces `{{ post.titl }}` . Can use filter b
 </body>
 </html>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 #### Command-line Util
 
@@ -333,16 +315,14 @@ variables surrounded by double-curly braces `{{ post.titl }}` . Can use filter b
 
 `manage.py` on other hand is created in each Django project and also has same ability as `django-admin` but also sets the `DJANGO_SETTINGS_MODULE` environment variable which points to our setting file \(depending on the env, we can change the setting\). 
 
-{% tabs %}
-{% tab title="manage.py" %}
+{% code title="manage.py" %}
 ```python
 import os
 
 #example of using dotted.path to our setting.py (myapp/settings/local.py) file 
 os.envron.setdefault("DJANGO_SETTINGS_MODULE", "myapp.settings.local")
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 we can use `django-admin` to start a project `django-admin startproject admin`  
 

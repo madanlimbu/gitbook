@@ -24,13 +24,11 @@ git config --global core.safecrlf true
 
 Finally, we can set line ending properties on a repo by using `.gitattributes` file which will be committed to the repo and overrides the`core.autocrlf` setting.
 
-{% tabs %}
-{% tab title=".gitattributes" %}
+{% code title=".gitattributes" %}
 ```text
 * text eol=lf
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 #### Note: we can run following command to convert CRLF to LF and update .gitattributes file to auto enforce LF line endings.
 

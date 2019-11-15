@@ -6,19 +6,16 @@ Unlike D7 .module is not required in module in D8. So we will only need `mymodul
 
  Where `mymodule.info.yml` defines the module and `mymodule.drush.inc` will implement `mymodule_drush_command()`
 
-{% tabs %}
-{% tab title="mymodule.info.yml" %}
+{% code title="mymodule.info.yml" %}
 ```yaml
 name: mymodule
 type: module
 description: Simple custom drush cmd in d8
 core: 8.x
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="mymodule.drush.inc" %}
+{% code title="mymodule.drush.inc" %}
 ```php
 /**
  * Implements hook_drush_command().
@@ -52,6 +49,5 @@ function drush_mymodule_do_something($arg = NULL) {
 }
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 

@@ -8,8 +8,7 @@
 
 Conversations are defined using YAML.[ \[Conversation Description Language\]](https://docs.opendialog.ai/docs/conversation_markup)
 
-{% tabs %}
-{% tab title="Custom\_Conversation.yml" %}
+{% code title="Custom\_Conversation.yml" %}
 ```yaml
 conversation:
   id: custom_conversation_unique_name
@@ -26,15 +25,13 @@ conversation:
             i: intent.project.CustomResponse
             completes: true
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 #### DefinE Response Template for Outgoing Intent using Admin UI
 
 OpenDialog uses custom XML Style mark up language to describe message template. [\[Message Markup\] ](https://docs.opendialog.ai/docs/message_markup)
 
-{% tabs %}
-{% tab title="Custom\_Response\_Template" %}
+{% code title="Custom\_Response\_Template" %}
 ```markup
 <message disable_text="true">
     <button-message>
@@ -48,8 +45,7 @@ OpenDialog uses custom XML Style mark up language to describe message template. 
 </message>
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 #### File Structure convention
 
@@ -75,16 +71,14 @@ resources/
 
 Attributes like `name` & `age` in the above examples needs to be register in `context_engine` in config file to determine what kind of Attribute they are.
 
-{% tabs %}
-{% tab title="config/opendialog/context\_engine.php" %}
+{% code title="config/opendialog/context\_engine.php" %}
 ```php
 'custom_attributes' => [
         'name' => \OpenDialogAi\Core\Attribute\StringAttribute::class,
         'age' => \OpenDialogAi\Core\Attribute\IntAttribute::class
     ],
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 #### Defining Custom Interpreter
 
@@ -92,8 +86,7 @@ We can use default Interpreter provided by core or define our own custom Interpr
 
 Create a custom interpreter class in the dir `app/Bot/Interpreter` this should extend  `BaseInterpreter` from `opendialog/core` .
 
-{% tabs %}
-{% tab title="app/Bot/Interpreter/CustomInterpreter.php" %}
+{% code title="app/Bot/Interpreter/CustomInterpreter.php" %}
 ```php
 namespace App\Bot\Interpreter;
 
@@ -123,20 +116,17 @@ class CustomInterpreter extends BaseInterpreter
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 After creating the custom interpreter class, we will still need to **register**/activate this Interpreter. This can be done by adding our custom Interpreter to `custom_interpreters` array list in the interpreter engine config file.
 
-{% tabs %}
-{% tab title="config/opendialog/interpreter\_engine.php" %}
+{% code title="config/opendialog/interpreter\_engine.php" %}
 ```php
 'custom_interpreters' => [
         \App\Bot\Interpreter\CustomInterpreter::class
         ]
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 #### Define custom Action
 
@@ -144,8 +134,7 @@ Action are used mostly to do actual work / task during conversation, It usually 
 
 Create a custom interpreter class in the dir `app/Bot/Actions` this should extend  `BaseAction` from `opendialog/core` .
 
-{% tabs %}
-{% tab title="app/Bot/Actions/CustomAction.php" %}
+{% code title="app/Bot/Actions/CustomAction.php" %}
 ```php
 namespace App\Bot\Actions;
 
@@ -183,13 +172,11 @@ class CustomAction extends BaseAction {
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
  Similar to Custom Interpreter, we also need to register the Custom Actions. We can do this in `action_engine` config file.
 
-{% tabs %}
-{% tab title="config/project/action\_engine.php" %}
+{% code title="config/project/action\_engine.php" %}
 ```php
 return [
     'custom_actions' => [
@@ -197,22 +184,19 @@ return [
     ],
 ];
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 #### Exporting Conversation YAML & Message template from Database to Code
 
 Add the conversation name/id to `active_conversations` config file.
 
-{% tabs %}
-{% tab title="config/project/active\_conversations.php" %}
+{% code title="config/project/active\_conversations.php" %}
 ```php
 return [
     'custom_conversation_unique_name'
 ];
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Then run `artisan` command to export that conversation.
 
@@ -230,15 +214,13 @@ The exported file will be saved at dir `resources/converations/custom_conversati
 
 We can also use callback id to fire an intent. Example in the message template example above we have given the button callback  to `custom_callback_id` ,  we can map this `id` to a intent in `interpreter_engine` config file so that when we receive `callback_id` we can fire the intent.
 
-{% tabs %}
-{% tab title="config/project/interpreter\_engine.php" %}
+{% code title="config/project/interpreter\_engine.php" %}
 ```php
 'supported_callbacks' => [
         'custom_callback_id' => 'intent.project.custom_intent'
     ]
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 #### Command to setup config files
 
