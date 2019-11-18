@@ -61,5 +61,5 @@ From above example, Cat & Dog node will need to have `is_a_family` relationship/
 
 ![](https://www.ontotext.com/wp-content/uploads/2019/10/Database-comparison-infographicFinal.svg)
 
-
+[https://www.ontotext.com/wp-content/uploads/2019/10/Database-comparison-infographicFinal.svg](https://www.ontotext.com/wp-content/uploads/2019/10/Database-comparison-infographicFinal.svg) 
 
