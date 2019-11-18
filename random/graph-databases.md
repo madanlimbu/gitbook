@@ -59,7 +59,5 @@ Efficient in traversing relationship in data.
 
 From above example, Cat & Dog node will need to have `is_a_family` relationship/edges between them during creation or we will have to traverse through Cat & Dog having `under_same_type_class` relationship/edges to find the relationship. 
 
-![](https://www.ontotext.com/wp-content/uploads/2019/10/Database-comparison-infographicFinal.svg)
-
-[https://www.ontotext.com/wp-content/uploads/2019/10/Database-comparison-infographicFinal.svg](https://www.ontotext.com/wp-content/uploads/2019/10/Database-comparison-infographicFinal.svg) 
+[https://www.ontotext.com/knowledgehub/fundamentals/relational-vs-property-graphs-vs-rdf-databases-at-a-glance/](https://www.ontotext.com/knowledgehub/fundamentals/relational-vs-property-graphs-vs-rdf-databases-at-a-glance/)
 
