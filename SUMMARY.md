@@ -34,6 +34,8 @@
     * [Setups](random/od-1/od.md)
     * [Creating Custom Converstation](random/od-1/creating-custom-converstation.md)
   * [PHP](random/debugging/README.md)
+    * [Tools](random/debugging/tools/README.md)
+      * [PHPStrom](random/debugging/tools/phpstrom.md)
     * [Composer](random/debugging/composer.md)
     * [Test & Debugging](random/debugging/php/README.md)
       * [PHPUnit Test](random/debugging/php/phpunit-test.md)
