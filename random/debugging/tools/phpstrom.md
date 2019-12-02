@@ -11,6 +11,7 @@ description: Useful most used tip and tricks on PHPStrom (Default settings on Ma
 * `Cmd + Alt + B` - Navigates to Implementation of method
 * `Cmd + R` - Search & Replace
 * `Cmd + Atl + L` - Reformat code
+* `Tab` or `Shift Tab` - Select & Tab to move selected code Right -&gt; or &lt;- Left
 * `Cmd + E` - Show recent files
 * `Ctrl + J` - Show documentation
 * `Cmd + F12` - Get List of Methods available in a Class
