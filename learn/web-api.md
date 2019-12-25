@@ -25,6 +25,10 @@ Web Worker Thread are closed once code runs & if there is no event listener pres
 
 
 
+#### Service Worker
+
+Service worker are special kind of `Worker()` that acts as a proxy between web app, browser & network. 
+
 #### Helpful links
 
 * [Web Workers API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)
