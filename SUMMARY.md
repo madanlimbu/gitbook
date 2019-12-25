@@ -2,6 +2,7 @@
 
 * [Madan notes](README.md)
 * [Learn](learn/README.md)
+  * [Web API](learn/web-api.md)
   * [Drupal](learn/drupal/README.md)
     * [Drupal 8](learn/drupal/drupal-8/README.md)
       * [Permissions](learn/drupal/drupal-8/permissions.md)
