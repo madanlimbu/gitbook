@@ -1,6 +1,6 @@
 # Web API
 
-#### Channel Messaging API
+### Channel Messaging API
 
 Channel Messaging API allows two different scripts in different contexts \(Workers/IFrames\) to communicate by passing messages between them in bi-directional channels with port in each end.  
 
@@ -12,7 +12,7 @@ Channel Messaging API allows two different scripts in different contexts \(Worke
 
 
 
-#### Web Workers
+### Web Workers
 
 Due to JS single threaded limitation, web workers were created to allow parallel execution. 
 
@@ -25,12 +25,30 @@ Web Worker Thread are closed once code runs & if there is no event listener pres
 
 
 
-#### Service Worker
+### Service Worker
 
 Service worker are special kind of `Worker()` that acts as a proxy between web app, browser & network. 
+
+* Fully async, hence Sync Web API \(XHR & localStorage\) can't be used inside service worker. 
+* `navigator.serviceWorker` returns `ServiceWorkerContainer` which can be used to `register('/my-service-worker.js')`  &  get service worker. 
+* listen to `install` or `activate` event & run appropriate functions
+* _Install_ : Good time to prepare the Service worker 
+* _Activate_ : Good time to clean up stuff from old version of service worker
+
+#### Life Cycle 
+
+* **Register** \(download service worker to client & attempt install/activate\)
+* **Install** \(fires if new service worker or first service worker encountered\)
+* **Activate** \(if installed & there is no other service worker then activate\)
+
+Service worker can listen to requests using `FetchEvent` event & provide respond using `FetchEvent.respondWith()`. we can listen to `fetch` event & respond accordingly_, for example we can use Cache API to check if we have cache for requested page & respond the cache instead of requesting server._ 
+
+
 
 #### Helpful links
 
 * [Web Workers API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)
 * [Channel Messaging API](https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API)
+* [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) 
+* [Service Worker Registration](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration)
 
