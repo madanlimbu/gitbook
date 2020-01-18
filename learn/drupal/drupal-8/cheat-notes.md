@@ -10,9 +10,7 @@
 
 #### Useful function of php module in Drupal
 
-`php_eval` which is a wrapper around php eval function. 
-
-Can be useful when wanting to run a function from drush. 
+`php_eval` which is a wrapper around php eval function. Can be useful when wanting to run a function from drush. 
 
 ```text
 drush php_eval "echo drupal_get_installed_schema_version('modulename');"
