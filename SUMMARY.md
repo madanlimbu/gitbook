@@ -47,6 +47,7 @@
     * [Wordpress](random/devops/wordpress/README.md)
       * [Permissions](random/devops/wordpress/permissions-in-wordpress-file-system.md)
     * [Linux](random/devops/linux/README.md)
+      * [Bashscripts](random/devops/linux/bashscripts.md)
       * [VPS setup](random/devops/linux/vps-setup.md)
       * [Systemd Startup Script](random/devops/linux/systemd-startup-script.md)
       * [Apache](random/devops/linux/apache/README.md)
