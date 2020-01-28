@@ -38,5 +38,11 @@ description: Quick simple run down on OAuth 2.0 Terminology & work flow
 
 Sites with only frontend so no secrect key is used. Direct request to access token after authorization to front end. Initial request during authorization we would query for `response type: token` instead of `response type: code` which is used to get `Authorization code`. Less secure as access token is out in the open and any one can use it \( malicious extensions or network  \). 
 
+### Client Credentials \( Backend to Backend server only \)
+
+{% embed url="https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/" %}
+
+{% embed url="https://auth0.com/docs/api-auth/tutorials/client-credentials" %}
+
 
 
