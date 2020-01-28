@@ -26,3 +26,17 @@ description: Quick simple run down on OAuth 2.0 Terminology & work flow
 
 **Secrect Key** - Should be only kept in backend server as it is used along side Access token to access the resources and used in back channel
 
+## Flavour of OAuth 2.0
+
+### Authorization code \(front channel + back channel \)
+
+ Uses secret key & Authorization code from Authenticator server to generate access token. 
+
+![](../.gitbook/assets/screenshot-2020-01-28-at-11.21.58-pm.png)
+
+### Front Channel only 
+
+Sites with only frontend so no secrect key is used. Direct request to access token after authorization to front end. Initial request during authorization we would query for `response type: token` instead of `response type: code` which is used to get `Authorization code`. Less secure as access token is out in the open and any one can use it \( malicious extensions or network  \). 
+
+
+
