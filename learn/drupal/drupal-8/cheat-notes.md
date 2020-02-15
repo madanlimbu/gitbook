@@ -17,5 +17,9 @@ drush php_eval "echo drupal_get_installed_schema_version('modulename');"
 drush php_eval "echo drupal_set_installed_schema_version('modulename', '8000');"
 ```
 
+Handy Drush Core for quick installation of clean drupal
 
+```text
+drush site-install standard --db-url='mysql://[db_user]:[db_pass]@localhost/[db_name]' --site-name=Example
+```
 
