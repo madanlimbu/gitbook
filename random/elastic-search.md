@@ -2,7 +2,7 @@
 description: Quick helpful notes on Elastic-search
 ---
 
-# Elastic-search
+# Elasticsearch
 
 #### Intro
 
@@ -13,6 +13,7 @@ Can use aggregations alongside search requests \( we can search documents, filte
 * **Document**: Collection of fields in the key-value pairs containing our data
 * **Indexed:** Document stored \(Optimised collection of documents\)
 * **Shards:** Divided indices \(data\) into different nodes\(servers\) of a cluster for horizontal scaling 
+* **Relevance score**: how well each document matches a query \(default sorting\)
 
 #### Basic **Elasticsearch** communication
 
@@ -50,9 +51,11 @@ We can do search by requesting on `_search` endpoint. The results are structured
         hits: [ #array of results docs (10 by default)
             { 
                 key: value #data inside doc
+                _score: value #documents relevance score
             },
             {
                 key: value
+                _score: value #documents relevance score
             }
         ]
     }
@@ -63,5 +66,21 @@ There is no state in Elasticsearch between searches, however for usage like pagi
 
 _**Note**: hits starts from `0`_ 
 
-\_\_
+#### [Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) \(Domain Specific Language\)
+
+```text
+#Two types of caluses:
+
+#1) Leaf (looks for particular value in particular field)
+match, should, must_not, term, range
+
+#2) Compound (combines with leaf or compound)
+bool, dis_max, filter
+```
+
+Relevance score \(`_score`\) will also depend on which context query clause is running on.
+
+Query context: Check if document matches & how relevant the document is \( `_score` \).
+
+Filter context: Absolute answer 
 
