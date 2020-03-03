@@ -39,3 +39,25 @@ pipenv uninstall Django
 pipenv install
 ```
 
+#### Different version of python in mac
+
+Use `pyenv`
+
+```bash
+#install python version manager/switcher
+brew install pyenv 
+
+#install python version
+pyenv install <python_version>
+
+# select a version to use
+pyenv local <python_version>
+
+#list versions installed
+pyenv versions
+
+#export PATH to overrdie default python version
+PATH="~/.pyenv/versions/<python_version>/bin:${PATH}" 
+
+```
+
