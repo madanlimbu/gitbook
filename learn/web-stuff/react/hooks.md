@@ -114,9 +114,9 @@ useEffect(() => {
 }, [])
 ```
 
-Clean ups with useEffect
+#### Clean ups with useEffect
 
-Once our component is unmounted/removed, we can run a function to clean up anything we had setup in useEffect. This can be done with useEffect return function.
+Once our component is unmounted/removed/stateChanges, we can run a function to clean up anything we had setup in useEffect. This can be done with useEffect return function. This cleanup function will be ran every-time we run useEffect to clean up previous changes. 
 
 ```text
 useEffect(() => {
