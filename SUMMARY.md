@@ -2,7 +2,9 @@
 
 * [Madan notes](README.md)
 * [Learn](learn/README.md)
-  * [Web API](learn/web-api.md)
+  * [Web Stuff](learn/web-stuff/README.md)
+    * [Web API](learn/web-stuff/web-api.md)
+    * [React](learn/web-stuff/react.md)
   * [Drupal](learn/drupal/README.md)
     * [Drupal / PHP Thangs](learn/drupal/drupal-php-thangs.md)
     * [Drupal 8](learn/drupal/drupal-8/README.md)
@@ -34,6 +36,7 @@
   * [Cookie](random/cookie.md)
   * [OAuth 2.0](random/oauth-2.0.md)
   * [Truly Random](random/truly-random/README.md)
+    * [Creating Old School Javascript Plugins](random/truly-random/creating-old-school-javascript-plugins.md)
     * [Elasticsearch](random/truly-random/elastic-search.md)
   * [Graph Databases](random/graph-databases.md)
   * [OD](random/od-1/README.md)
@@ -57,5 +60,4 @@
       * [Apache](random/devops/linux/apache/README.md)
         * [Setting up Apache Server](random/devops/linux/apache/setting-up-apache-server.md)
         * [VirtualBox Sharing file](random/devops/linux/apache/virtualbox-sharing-file.md)
-  * [Creating Old School Javascript Plugins](random/creating-old-school-javascript-plugins.md)
 
