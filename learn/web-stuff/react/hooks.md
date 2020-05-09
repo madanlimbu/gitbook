@@ -2,6 +2,8 @@
 
 ### Overview
 
+Hooks are function which we can use to hook into React features.
+
 React hooks can be only used with functional components. 
 
 The execution order of the hooks should always be same. Meaning it cannot be inside conditional statements.
@@ -81,5 +83,50 @@ setObjectCount(prevState => { return { count: prevState + 5 } } )
 
 //We will use speard operator to get old state value & update count with new value then update the state with all the property.
 setObjectCount(prevState => { return { ...prevState, count: prevState + 5 } } )
+```
+
+### useEffect
+
+`useEffect(() => { FUNCTIONS_TO_RUN_ON_RENDER }, OPTIONAL_STATE_ARRAY_TO_WATCH)`
+
+useEffect are useful when trying to create some side effect in the site or make some API request. 
+
+They run on every render. 
+
+However, we can pass in the state name as second argument which will then cause it to execute only when the state value changes from the list of second argument. 
+
+we can also pass in empty array which means it will only run on first mount/render. 
+
+```text
+//Runs on each render
+useEffect(() => {
+    console.log("ran effect")
+})
+
+//Runs only when the state changes for the variable in the list
+useEffect(() => {
+    console.log("ran effect")
+}, [count, name])
+
+//Runs on first render/mount only
+useEffect(() => {
+    console.log("ran effect")
+}, [])
+```
+
+Clean ups with useEffect
+
+Once our component is unmounted/removed, we can run a function to clean up anything we had setup in useEffect. This can be done with useEffect return function.
+
+```text
+useEffect(() => {
+    // add listener to an element
+    button.addEventListener('onclick', handleOnClick);
+    
+    //Clean up by removing event listener
+    return () => {
+        button.removeEventListener('onclick', handleOnClick)
+    }
+}, []) // run on mount only
 ```
 
