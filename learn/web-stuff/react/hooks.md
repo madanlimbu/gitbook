@@ -6,7 +6,7 @@ Hooks are function which we can use to hook into React features.
 
 React hooks can be only used with functional components. 
 
-The execution order of the hooks should always be same. Meaning it cannot be inside conditional statements.
+The execution order of the hooks should always be same. Meaning it cannot be inside conditional statements, loops or nested functions. Only Call Hooks at the Top Level. [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
 ### useState
 
@@ -91,7 +91,7 @@ setObjectCount(prevState => { return { ...prevState, count: prevState + 5 } } )
 
 useEffect are useful when trying to create some side effect in the site or make some API request. 
 
-They run on every render. 
+They run on every render \(after render / DOM has been updated\). 
 
 However, we can pass in the state name as second argument which will then cause it to execute only when the state value changes from the list of second argument. 
 
@@ -129,4 +129,31 @@ useEffect(() => {
     }
 }, []) // run on mount only
 ```
+
+### Custom Hook
+
+Custom hook are functions with name that starts with `use` & can call other hooks. 
+
+Custom hooks are useful when we have more than one hook/functions that share the logics.
+
+Custom hooks functions has not specific signature, meaning it can take in any arguments & return anything.
+
+```text
+// Custom hook
+function useUserStatus(userId) {
+    const [userStatus, setUserStatus] = useState(null);
+    // ... some logic to get/update status
+    return userStatus;
+}
+
+// Using custom hook like normal hook inside React Component
+function UserProfile(userId) {
+    const userStatus = useUserStatus(userId);
+    return (<div>Status: {userStatus}</div>);
+}
+```
+
+{% embed url="https://reactjs.org/docs/hooks-rules.html" %}
+
+
 
