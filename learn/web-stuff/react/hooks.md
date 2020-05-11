@@ -1,6 +1,6 @@
 # Hooks
 
-### Overview
+## Overview
 
 Hooks are function which we can use to hook into React features.
 
@@ -8,7 +8,7 @@ React hooks can be only used with functional components.
 
 The execution order of the hooks should always be same. Meaning it cannot be inside conditional statements, loops or nested functions. Only Call Hooks at the Top Level. [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
-### useState
+## useState
 
 `useState(DEFAULT_STATE_VALUE): [CURRENT_STATE_VALUE, STATE_UPDATING_FUNCTION()]`
 
@@ -85,7 +85,7 @@ setObjectCount(prevState => { return { count: prevState + 5 } } )
 setObjectCount(prevState => { return { ...prevState, count: prevState + 5 } } )
 ```
 
-### useEffect
+## useEffect
 
 `useEffect(() => { FUNCTIONS_TO_RUN_ON_RENDER }, OPTIONAL_STATE_ARRAY_TO_WATCH)`
 
@@ -130,7 +130,7 @@ useEffect(() => {
 }, []) // run on mount only
 ```
 
-### Custom Hook
+## Custom Hook
 
 Custom hook are functions with name that starts with `use` & can call other hooks. 
 
@@ -152,6 +152,41 @@ function UserProfile(userId) {
     return (<div>Status: {userStatus}</div>);
 }
 ```
+
+## useContext
+
+`useContext` allow us to access the value from the different component not directly above current component without passing  props from one component to another.
+
+we can create custom context using `React.createContext`
+
+`useContext` then takes in this context object and returns the current value of that context. 
+
+we can use this hook by wrapping the component we use this hook with `ExampleContext.Provider` .
+
+This `value` is determined from the closest provider above the calling component.
+
+component using useContext will always re-render when context value is changed.
+
+```text
+const GlobalContext = React.createContext();
+
+//Compoent with Context Provider wrapped up
+function Test () {
+    return (
+        <GlobalContext.Provider value="Madan">
+            <CustomComponents />
+        </GlobalContext.Provider>
+    );
+}
+
+//Somewhere deep in the CustomComponents component tree
+function DeepCompoent() {
+    const contextValue = useContext(GlobalContext);
+    return (<h1>{{ contextValue.value }}</h1>);
+}
+```
+
+
 
 {% embed url="https://reactjs.org/docs/hooks-rules.html" %}
 
