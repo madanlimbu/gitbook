@@ -155,13 +155,13 @@ function UserProfile(userId) {
 
 ## useContext
 
-`useContext` allow us to access the value from the different component not directly above current component without passing  props from one component to another.
+`useContext` allow us to access the value from component without passing  props from direct parent component and avoid cuber-some task of passing props to share with child's.
 
 we can create custom context using `React.createContext`
 
 `useContext` then takes in this context object and returns the current value of that context. 
 
-we can use this hook by wrapping the component we use this hook with `ExampleContext.Provider` .
+we can use this hook by wrapping any parent up the component we use this hook with `ExampleContext.Provider` .
 
 This `value` is determined from the closest provider above the calling component.
 
@@ -186,9 +186,46 @@ function DeepCompoent() {
 }
 ```
 
+## useReducer
 
+Similar to `useState` / `Redux` we can use reducer hook to  reduce our state.
 
-{% embed url="https://reactjs.org/docs/hooks-rules.html" %}
+```text
+//Reducer that has logic to handle different action, takes in previousState & action.
+const reducer = (state, action) => newState;
 
+//Takes in reducer, initialState & init(initialState)
+const [state, dispatch] = useReducer(reducer, initialState, init);
 
+//We can then call the dispatch function to update the state
+dispatch({ type: 'updateAction'})
+```
+
+#### Initialise useReducer
+
+1. We can initialise reducer using just reducer & initialState.
+2. We can use pass 3rd parameter \(init\) function that takes in initialState as argument then lazy load the initialState from \(init\) function. `useReducer((prevS, action) => newS , initialS, (initialS) => initialS)`
+
+Reducer dispatch is also useful when trying to avoid deep nested callbacks. With context, we can pass down the `dispatch` function from `useReducer`
+
+```text
+const GlobalContext = React.createContext();
+
+function App() {
+    const [state, dispatch] = useReducer(reducer, initialState);
+    return (
+        <GlobalContext.Provider value={dispatch}>
+            <SomeComponents />
+        </GlobalContext.Provider>
+    );
+}
+
+function SomeComponents() {
+    const dispatch = useContext(GlobalContext);
+    return (
+        <button onClick={dispatch({type: 'updateState', extra: 'data'})}>Ok</button>
+    );
+}
+
+```
 
