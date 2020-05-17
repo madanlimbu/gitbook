@@ -6,6 +6,8 @@
 
 **Re-Painting** - Any changes to real DOM \(UI\)
 
+**Comparison** - React uses Shallow comparison [`Object.is`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is) which is why it is better to avoid mutating data. 
+
 {% embed url="https://felixgerschau.com/react-rerender-components" %}
 
 {% embed url="https://svelte.dev/blog/virtual-dom-is-pure-overhead" %}

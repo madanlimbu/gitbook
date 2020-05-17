@@ -229,25 +229,3 @@ function SomeComponents() {
 
 ```
 
-### useMemo
-
-If we have function that has high computational use then we can use `useMemo` to optimise our component so there is no recompute on re-render.
-
-`useMemo(() => expensiveComputeFunction(a, b), [a, b]);`
-
-useMemo takes in a pure function with input variables & array of dependencies that it watch before it re-runs the function and if the input are same it will return the cached result from memory \(vdom\). It then returns a [memorized](https://en.wikipedia.org/wiki/Memoization) value. 
-
-_**Note**: Don't get it confused with `React.memo` which is a higher order component that takes in a functional component \(returns the component\) and skips re-rendering if same props are passed in. It also  only does shallow comparison so object props can cause re-render as they are re-declared and have different reference. However, we can pass function as second parameter to compare our prevProps & newProps._ 
-
-### useCallback
-
-Similar to `useMemo` but `useCallback` returns a memoized callback instead of memoized value.
-
-`const memoizedCallback = useCallback(()=> {someFunction(a, b);}, [a, b]);`
-
-This is useful when passing callbacks to optimised child components that rely on reference equality to prevent unnecessary renders.
-
-Since react uses Shallow comparing \([Object.is](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is)\) when if we are passing object/function to child component then we will be redeclaring them on each render. This means even if nothing changes in the component we will be re-rendering it as the reference of the object/function is different. To solve/optimise this issue we can use `useCallback` to memoize callback function so they reference to same function.
-
-
-
