@@ -10,6 +10,7 @@
   * [Drupal](learn/drupal/README.md)
     * [Drupal / PHP Thangs](learn/drupal/drupal-php-thangs.md)
     * [Drupal 8](learn/drupal/drupal-8/README.md)
+      * [JS](learn/drupal/drupal-8/js.md)
       * [Permissions](learn/drupal/drupal-8/permissions.md)
       * [Cheat Notes](learn/drupal/drupal-8/cheat-notes.md)
       * [Annotations](learn/drupal/drupal-8/annotations.md)
