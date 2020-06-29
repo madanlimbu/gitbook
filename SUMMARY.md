@@ -52,6 +52,7 @@
       * [PHPUnit Test](random/debugging/php/phpunit-test.md)
       * [Cheats/Hacks](random/debugging/php/cheats-hacks.md)
   * [DevOps](random/devops/README.md)
+    * [Database](random/devops/database.md)
     * [Docker](random/devops/docker.md)
     * [Wordpress](random/devops/wordpress/README.md)
       * [Permissions](random/devops/wordpress/permissions-in-wordpress-file-system.md)
