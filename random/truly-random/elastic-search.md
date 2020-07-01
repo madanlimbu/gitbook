@@ -84,3 +84,29 @@ Query context: Check if document matches & how relevant the document is \( `_sco
 
 Filter context: Absolute answer 
 
+### Inverted index
+
+How the data is structure/stored for fast search.
+
+![Inverted index example](../../.gitbook/assets/screenshot-2020-07-01-at-7.03.19-pm.png)
+
+### String
+
+In ES string can be saved as **Text** or **Keyword**. 
+
+Difference being **Text** type will tokenize / normalize before saving to inverted index. However, Keyword would directly add it to inverted index.
+
+_Example: "hello world", In **Text** would be added as \("hello", "world"\) but as "hello world" in **Keyword**._
+
+## Term and Match Query 
+
+Term query looks for exact match of Search \(String\) but In Match query Search  \(String\) are analysed before look up.
+
+{% embed url="https://www.youtube.com/watch?v=nShb3MWYppI" %}
+
+
+
+ 
+
+
+
