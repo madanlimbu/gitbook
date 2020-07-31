@@ -17,6 +17,7 @@
       * [Custom Drush](learn/drupal/drupal-8/drush-command.md)
       * [Form API](learn/drupal/drupal-8/form-api.md)
       * [Data system](learn/drupal/drupal-8/type-of-data-storage.md)
+      * [Entity](learn/drupal/drupal-8/entity.md)
     * [Drupal 7](learn/drupal/drupal-7/README.md)
       * [Custom Field Widget](learn/drupal/drupal-7/custom-field-widget.md)
       * [Cheat Notes](learn/drupal/drupal-7/cheat-notes.md)
