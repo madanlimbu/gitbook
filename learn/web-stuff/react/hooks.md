@@ -265,7 +265,7 @@ It can also be used with react `ref` attribute to hold the DOM node so we can re
 
 _Note: changing `.current` property doesn't cause a re-render like `useState`_ 
 
-\_\_
+![Example of using ref with element \(video\)](../../../.gitbook/assets/screenshot-2020-08-15-at-12.16.11-am.png)
 
 
 
