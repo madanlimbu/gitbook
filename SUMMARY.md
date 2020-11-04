@@ -26,6 +26,7 @@
       * [Custom Drush Command](learn/drupal/drupal-7/drush-command.md)
       * [Drush make](learn/drupal/drupal-7/drush-make.md)
   * [Git](learn/git/README.md)
+    * [Useful snippets](learn/git/useful-snippets.md)
     * [CRLF will be replaced by LF](learn/git/crlf-will-be-replaced-by-lf.md)
     * [Git IncludeIf](learn/git/git-includeif.md)
     * [Gitflow](learn/git/gitflow.md)
