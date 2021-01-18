@@ -8,7 +8,7 @@ Has tree structure, elements/tags can be root, parent, child, or siblings. All e
 
 XML Prolog -  `<?xml version="1.0" encoding="UTF-8"?>` , specifies character encoding to avoid unique characters like international characters.
 
-### Some characterstics of XML:
+### Some characterIstics of XML:
 
 * Must have a closing tag
   * We can however use a self-closing tag for empty elements - `<title />` 
