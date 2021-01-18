@@ -43,6 +43,7 @@
     * [Creating Old School Javascript Plugins](random/truly-random/creating-old-school-javascript-plugins.md)
     * [Elasticsearch](random/truly-random/elastic-search.md)
     * [XML](random/truly-random/xml.md)
+    * [Web services](random/truly-random/web-services.md)
   * [Graph Databases](random/graph-databases.md)
   * [OD](random/od-1/README.md)
     * [Setups](random/od-1/od.md)
