@@ -21,6 +21,7 @@ Example:
 // message element - define parts of each message and data type
 <message name="getTagRequest">
     <part name="tag" type="xs:string"/>
+    <part name="published" type="xs:string"/>
 </message>
 
 <message name="getTagResponse">
