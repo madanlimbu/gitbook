@@ -1,6 +1,6 @@
 # Cheat Notes
 
-#### D8 Modules Structures:
+### D8 Modules Structures:
 
 * module in `.info.yml`
 * routes in `.routing.yml`
@@ -8,7 +8,7 @@
 * css/JS libraries in `.libraries.yml`
 * permissions `.permissions.yml`
 
-#### Useful function of php module in Drupal
+### Useful function of php module in Drupal
 
 `php_eval` which is a wrapper around php eval function. Can be useful when wanting to run a function from drush. 
 
@@ -21,5 +21,12 @@ Handy Drush Core for quick installation of clean drupal
 
 ```text
 drush site-install standard --db-url='mysql://[db_user]:[db_pass]@localhost/[db_name]' --site-name=Example
+```
+
+### Disabling CSS/JS Aggregation using Drush
+
+```text
+drush -y config-set system.performance css.preprocess 0
+drush -y config-set system.performance js.preprocess 0
 ```
 
