@@ -3,6 +3,7 @@
 * [Madan notes](README.md)
 * [Learn](learn/README.md)
   * [Web Stuff](learn/web-stuff/README.md)
+    * [SEO](learn/web-stuff/seo.md)
     * [Web API](learn/web-stuff/web-api.md)
     * [React](learn/web-stuff/react/README.md)
       * [Hooks](learn/web-stuff/react/hooks.md)
