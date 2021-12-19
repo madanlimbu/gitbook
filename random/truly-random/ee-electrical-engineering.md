@@ -34,7 +34,8 @@ Circuits, Ohm's Law, Kirchhoff's Laws (KVL, KCL), Nodal analysis (Node voltage m
 
 _References_:\
 [Kirchhoff's Laws\
-](https://www.youtube.com/watch?v=2Zu3ppq3n8I)[Node voltage method](https://www.youtube.com/watch?v=-wCGiSNk5tw)
+](https://www.youtube.com/watch?v=2Zu3ppq3n8I)[Node voltage method](https://www.youtube.com/watch?v=-wCGiSNk5tw)\
+[Mesh current analysis](https://www.youtube.com/watch?v=nC0PJqOJJ28)
 
 ### **Superposition, Thévenin and Norton**
 
