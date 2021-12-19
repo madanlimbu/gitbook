@@ -45,6 +45,7 @@
     * [Elasticsearch](random/truly-random/elastic-search.md)
     * [XML](random/truly-random/xml.md)
     * [Web services](random/truly-random/web-services.md)
+    * [EE (Electrical Engineering)](random/truly-random/ee-electrical-engineering.md)
   * [Graph Databases](random/graph-databases.md)
   * [OD](random/od-1/README.md)
     * [Setups](random/od-1/od.md)
@@ -69,4 +70,3 @@
       * [Apache](random/devops/linux/apache/README.md)
         * [Setting up Apache Server](random/devops/linux/apache/setting-up-apache-server.md)
         * [VirtualBox Sharing file](random/devops/linux/apache/virtualbox-sharing-file.md)
-
