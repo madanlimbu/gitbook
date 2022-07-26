@@ -4,7 +4,7 @@
 
 Hooks are function which we can use to hook into React features.
 
-React hooks can be only used with functional components.&#x20;
+React hooks can be only used with functional components. 
 
 The execution order of the hooks should always be same. Meaning it cannot be inside conditional statements, loops or nested functions. Only Call Hooks at the Top Level. [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
@@ -14,7 +14,7 @@ The execution order of the hooks should always be same. Meaning it cannot be ins
 
 Takes in a default value & returns array containing current state value & a function which can be used to update the state. Every time there is new state the component is re-rendered.
 
-```
+```text
 import React, { useState } from 'react';
 
 function TestApp() {
@@ -34,7 +34,7 @@ function TestApp() {
 
 _**Note**: if we are using previous value of the state to make changes on state, we should pass in function parameter to update the state._
 
-```
+```text
 // Don't do
 function updateCount() {
     setCount(count + 5);
@@ -56,9 +56,9 @@ function updateCount() {
 
 #### Initial State
 
-useState can also take in a normal default value or a function that returns the value. The difference being that a normal default value will be updated/ran every time the component re-renders. This is why it is always better to pass in default value as a function if the generation of the value need higher computational usage.&#x20;
+useState can also take in a normal default value or a function that returns the value. The difference being that a normal default value will be updated/ran every time the component re-renders. This is why it is always better to pass in default value as a function if the generation of the value need higher computational usage. 
 
-```
+```text
 function initialFn() {
     console.log("Rendered");
     return 5;
@@ -75,7 +75,7 @@ const [count, setCount] = useState(() => initialFn());
 
 One thing to note about state from class component state is that when we update the state of an object there is no auto merging happening which means the new state will override all the value of old state.
 
-```
+```text
 const objectCount, setObjectCount] = useState({ count: 5, name: 'madan'})
 
 //This new state will override the old state which means the name property will dissapear too as there is no auto merging.
@@ -89,15 +89,15 @@ setObjectCount(prevState => { return { ...prevState, count: prevState + 5 } } )
 
 `useEffect(() => { FUNCTIONS_TO_RUN_ON_RENDER }, OPTIONAL_STATE_ARRAY_TO_WATCH)`
 
-useEffect are useful when trying to create some side effect in the site or make some API request.&#x20;
+useEffect are useful when trying to create some side effect in the site or make some API request. 
 
-They run on every render (after render / DOM has been updated).&#x20;
+They run on every render \(after render / DOM has been updated\). 
 
-However, we can pass in the state name as second argument which will then cause it to execute only when the state value changes from the list of second argument.&#x20;
+However, we can pass in the state name as second argument which will then cause it to execute only when the state value changes from the list of second argument. 
 
-we can also pass in empty array which means it will only run on first mount/render.&#x20;
+we can also pass in empty array which means it will only run on first mount/render. 
 
-```
+```text
 //Runs on each render
 useEffect(() => {
     console.log("ran effect")
@@ -116,9 +116,9 @@ useEffect(() => {
 
 #### Clean ups with useEffect
 
-Once our component is unmounted/removed/stateChanges, we can run a function to clean up anything we had setup in useEffect. This can be done with useEffect return function. This cleanup function will be ran every-time we run useEffect to clean up previous changes.&#x20;
+Once our component is unmounted/removed/stateChanges, we can run a function to clean up anything we had setup in useEffect. This can be done with useEffect return function. This cleanup function will be ran every-time we run useEffect to clean up previous changes. 
 
-```
+```text
 useEffect(() => {
     // add listener to an element
     button.addEventListener('onclick', handleOnClick);
@@ -132,13 +132,13 @@ useEffect(() => {
 
 ## Custom Hook
 
-Custom hook are functions with name that starts with `use` & can call other hooks.&#x20;
+Custom hook are functions with name that starts with `use` & can call other hooks. 
 
 Custom hooks are useful when we have more than one hook/functions that share the logics.
 
 Custom hooks functions has not specific signature, meaning it can take in any arguments & return anything.
 
-```
+```text
 // Custom hook
 function useUserStatus(userId) {
     const [userStatus, setUserStatus] = useState(null);
@@ -159,7 +159,7 @@ function UserProfile(userId) {
 
 we can create custom context using `React.createContext`
 
-`useContext` then takes in this context object and returns the current value of that context.&#x20;
+`useContext` then takes in this context object and returns the current value of that context. 
 
 we can use this hook by wrapping any parent up the component we use this hook with `ExampleContext.Provider` .
 
@@ -167,7 +167,7 @@ This `value` is determined from the closest provider above the calling component
 
 component using useContext will always re-render when context value is changed.
 
-```
+```text
 const GlobalContext = React.createContext();
 
 //Compoent with Context Provider wrapped up
@@ -190,7 +190,7 @@ function DeepCompoent() {
 
 Similar to `useState` / `Redux` we can use reducer hook to  reduce our state.
 
-```
+```text
 //Reducer that has logic to handle different action, takes in previousState & action.
 const reducer = (state, action) => newState;
 
@@ -204,11 +204,11 @@ dispatch({ type: 'updateAction'})
 #### Initialise useReducer
 
 1. We can initialise reducer using just reducer & initialState.
-2. We can use pass 3rd parameter (init) function that takes in initialState as argument then lazy load the initialState from (init) function. `useReducer((prevS, action) => newS , initialS, (initialS) => initialS)`
+2. We can use pass 3rd parameter \(init\) function that takes in initialState as argument then lazy load the initialState from \(init\) function. `useReducer((prevS, action) => newS , initialS, (initialS) => initialS)`
 
 Reducer dispatch is also useful when trying to avoid deep nested callbacks. With context, we can pass down the `dispatch` function from `useReducer`
 
-```
+```text
 const GlobalContext = React.createContext();
 
 function App() {
@@ -235,9 +235,9 @@ If we have function that has high computational use then we can use `useMemo` to
 
 `useMemo(() => expensiveComputeFunction(a, b), [a, b]);`
 
-useMemo takes in a pure function with input variables & array of dependencies that it watch before it re-runs the function and if the input are same it will return the cached result from memory (vdom). It then returns a [memorized](https://en.wikipedia.org/wiki/Memoization) value.&#x20;
+useMemo takes in a pure function with input variables & array of dependencies that it watch before it re-runs the function and if the input are same it will return the cached result from memory \(vdom\). It then returns a [memorized](https://en.wikipedia.org/wiki/Memoization) value. 
 
-_**Note**: Don't get it confused with `React.memo` which is a higher order component that takes in a functional component (returns the component) and skips re-rendering if same props are passed in. It also  only does shallow comparison so object props can cause re-render as they are re-declared and have different reference. However, we can pass function as second parameter to compare our prevProps & newProps._&#x20;
+_**Note**: Don't get it confused with `React.memo` which is a higher order component that takes in a functional component \(returns the component\) and skips re-rendering if same props are passed in. It also  only does shallow comparison so object props can cause re-render as they are re-declared and have different reference. However, we can pass function as second parameter to compare our prevProps & newProps._ 
 
 ## useCallback
 
@@ -247,13 +247,13 @@ Similar to `useMemo` but `useCallback` returns a memoized callback instead of me
 
 This is useful when passing callbacks to optimised child components that rely on reference equality to prevent unnecessary renders.
 
-Since react uses Shallow comparing ([Object.is](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Object/is)) when if we are passing object/function to child component then we will be redeclaring them on each render. This means even if nothing changes in the component we will be re-rendering it as the reference of the object/function is different. To solve/optimise this issue we can use `useCallback` to memoize callback function so they reference to same function.
+Since react uses Shallow comparing \([Object.is](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is)\) when if we are passing object/function to child component then we will be redeclaring them on each render. This means even if nothing changes in the component we will be re-rendering it as the reference of the object/function is different. To solve/optimise this issue we can use `useCallback` to memoize callback function so they reference to same function.
 
 ## useRef
 
 useRef is useful when keeping a mutable data which will persist on every render until component is removed.
 
-```
+```text
 const mutableValue = useRef(initialValue);
 ```
 
@@ -261,13 +261,11 @@ It returns an object with `.current` property that holds the value that we passe
 
 _Again not to be confused with `React.createRef` which is created on every render._
 
-It can also be used with react `ref` attribute to hold the DOM node so we can reference it in future.&#x20;
+It can also be used with react `ref` attribute to hold the DOM node so we can reference it in future. 
 
-_Note: changing `.current` property doesn't cause a re-render like `useState` _&#x20;
+_Note: changing `.current` property doesn't cause a re-render like `useState`_ 
 
-![Example of using ref with element (video)](../../../.gitbook/assets/screenshot-2020-08-15-at-12.16.11-am.png)
+![Example of using ref with element \(video\)](../../../.gitbook/assets/screenshot-2020-08-15-at-12.16.11-am.png)
 
-Extra
 
-* Good reference on when to use useCallback vs useMemo - [https://blog.shahednasser.com/react-usememo-vs-usecallback-when-to-use/](https://blog.shahednasser.com/react-usememo-vs-usecallback-when-to-use/)
 
