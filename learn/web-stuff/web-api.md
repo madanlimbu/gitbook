@@ -91,3 +91,4 @@ useEffect(() => {
 * [Channel Messaging API](https://developer.mozilla.org/en-US/docs/Web/API/Channel\_Messaging\_API)
 * [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service\_Worker\_API)&#x20;
 * [Service Worker Registration](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration)
+* [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch\_API)
