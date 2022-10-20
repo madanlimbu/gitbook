@@ -2,7 +2,7 @@
 
 Sometimes when debugging a php project, it can take time to setup proper debugging tools and we might not have enough time. In such case I personally resort to using php `error_log` [function](https://www.php.net/manual/en/function.error-log.php).
 
-{% code title="some\_file\_to\_debug.php" %}
+{% code title="some_file_to_debug.php" %}
 ```php
 function someRandomFunctionToDebug($variables) {
     $log = "Time : " . date('Y-m-d H:i:s') . " | Detail : " . $variables . "\r\n";
@@ -18,6 +18,4 @@ Above is the simple example of code to put my log of code that I want to debug. 
 tail -f /var/tmp/debug-errors.log
 ```
 {% endcode %}
-
-
 

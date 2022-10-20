@@ -12,7 +12,7 @@ For this example, we have script to mount shared folder of host to virtual machi
 echo "password" | sudo mount -t vboxsf Shared-Name /home/userName/Shared-location/;
 ```
 
-we also want it to be executable so we can give it permission to execute using following cmd: 
+we also want it to be executable so we can give it permission to execute using following cmd:&#x20;
 
 ```bash
 chmod 774 shared.sh
@@ -20,7 +20,7 @@ chmod 774 shared.sh
 
 #### **Next, we need to create systemd start up script.**
 
-Create systemd startup script like `systemdStartUpScript.service` then place it at `/etc/systemd/system` _****_
+Create systemd startup script like `systemdStartUpScript.service` then place it at `/etc/systemd/system` _****_&#x20;
 
 systemd script has basic structure like given below:
 
@@ -54,6 +54,4 @@ systemctl daemon-reload
 systemctl enable systemdStartUpScript.service
 ```
 
-Finally, reboot your system to see the script execute and aromatically mount the shared folder to virtual machine in this case.  
-
-
+Finally, reboot your system to see the script execute and aromatically mount the shared folder to virtual machine in this case.\

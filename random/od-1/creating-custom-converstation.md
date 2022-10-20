@@ -6,9 +6,9 @@
 
 #### Define Conversation using YAML in Admin UI
 
-Conversations are defined using YAML.[ \[Conversation Description Language\]](https://docs.opendialog.ai/docs/conversation_markup)
+Conversations are defined using YAML.[ \[Conversation Description Language\]](https://docs.opendialog.ai/docs/conversation\_markup)
 
-{% code title="Custom\_Conversation.yml" %}
+{% code title="Custom_Conversation.yml" %}
 ```yaml
 conversation:
   id: custom_conversation_unique_name
@@ -29,9 +29,9 @@ conversation:
 
 #### DefinE Response Template for Outgoing Intent using Admin UI
 
-OpenDialog uses custom XML Style mark up language to describe message template. [\[Message Markup\] ](https://docs.opendialog.ai/docs/message_markup)
+OpenDialog uses custom XML Style mark up language to describe message template. [\[Message Markup\] ](https://docs.opendialog.ai/docs/message\_markup)
 
-{% code title="Custom\_Response\_Template" %}
+{% code title="Custom_Response_Template" %}
 ```markup
 <message disable_text="true">
     <button-message>
@@ -49,7 +49,7 @@ OpenDialog uses custom XML Style mark up language to describe message template. 
 
 #### File Structure convention
 
-```text
+```
 app/
     Bot/
         Actions/
@@ -71,7 +71,7 @@ resources/
 
 Attributes like `name` & `age` in the above examples needs to be register in `context_engine` in config file to determine what kind of Attribute they are.
 
-{% code title="config/opendialog/context\_engine.php" %}
+{% code title="config/opendialog/context_engine.php" %}
 ```php
 'custom_attributes' => [
         'name' => \OpenDialogAi\Core\Attribute\StringAttribute::class,
@@ -120,7 +120,7 @@ class CustomInterpreter extends BaseInterpreter
 
 After creating the custom interpreter class, we will still need to **register**/activate this Interpreter. This can be done by adding our custom Interpreter to `custom_interpreters` array list in the interpreter engine config file.
 
-{% code title="config/opendialog/interpreter\_engine.php" %}
+{% code title="config/opendialog/interpreter_engine.php" %}
 ```php
 'custom_interpreters' => [
         \App\Bot\Interpreter\CustomInterpreter::class
@@ -174,9 +174,9 @@ class CustomAction extends BaseAction {
 ```
 {% endcode %}
 
- Similar to Custom Interpreter, we also need to register the Custom Actions. We can do this in `action_engine` config file.
+&#x20;Similar to Custom Interpreter, we also need to register the Custom Actions. We can do this in `action_engine` config file.
 
-{% code title="config/project/action\_engine.php" %}
+{% code title="config/project/action_engine.php" %}
 ```php
 return [
     'custom_actions' => [
@@ -190,7 +190,7 @@ return [
 
 Add the conversation name/id to `active_conversations` config file.
 
-{% code title="config/project/active\_conversations.php" %}
+{% code title="config/project/active_conversations.php" %}
 ```php
 return [
     'custom_conversation_unique_name'
@@ -214,7 +214,7 @@ The exported file will be saved at dir `resources/converations/custom_conversati
 
 We can also use callback id to fire an intent. Example in the message template example above we have given the button callback  to `custom_callback_id` ,  we can map this `id` to a intent in `interpreter_engine` config file so that when we receive `callback_id` we can fire the intent.
 
-{% code title="config/project/interpreter\_engine.php" %}
+{% code title="config/project/interpreter_engine.php" %}
 ```php
 'supported_callbacks' => [
         'custom_callback_id' => 'intent.project.custom_intent'
@@ -232,7 +232,5 @@ php artisan vendor:publish --tag=opendialog-config
 
 #### In short
 
-Text/Utterance -&gt; Interpreter checks if valid -&gt; Fires matching Intent -&gt; if Intent has Action in Conversation -&gt; Call Action::Perform -&gt; Action Return Result Value -&gt; Response/Message Template Use that Result value 
-
-
+Text/Utterance -> Interpreter checks if valid -> Fires matching Intent -> if Intent has Action in Conversation -> Call Action::Perform -> Action Return Result Value -> Response/Message Template Use that Result value&#x20;
 

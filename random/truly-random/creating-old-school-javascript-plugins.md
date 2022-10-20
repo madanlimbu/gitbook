@@ -1,6 +1,6 @@
 # Creating Old School Javascript Plugins
 
-I like to watch the video \( mostly anime/drama \) while reading or working on something. However, when watching the video in half screen of the window, the random stuff from the video page is very distracting. Hence, I wanted to create simple JS script to hide random stuff and only show video which can be injected to the website using any of browser JS/CSS add-ons/extensions. Consequently, I wanted to write some reusable JS Plugin/Module. Here is my adventure of creating one.  
+I like to watch the video ( mostly anime/drama ) while reading or working on something. However, when watching the video in half screen of the window, the random stuff from the video page is very distracting. Hence, I wanted to create simple JS script to hide random stuff and only show video which can be injected to the website using any of browser JS/CSS add-ons/extensions. Consequently, I wanted to write some reusable JS Plugin/Module. Here is my adventure of creating one.\
 
 
 My Plan, Simple JS Plugin Template which can be reused for my future project. I will be making an extra element that will hide all unwanted stuff from the page and put the element under video player so only video player will be visible. To make webpage usable I will put an event listener when the mouse is over the webpage to show hidden element that way the user can navigate when they finish watching the video. Finally, I will expose the video player selector definable through argument so that the plugin can be used on different websites.
@@ -11,7 +11,7 @@ My Plan, Simple JS Plugin Template which can be reused for my future project. I 
 
 #### Firstly, I will be using [UMD](https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/) wrapping pattern to wrap my plugin to support both AMD, CommonJS and Traditional Module Pattern.
 
-```text
+```
 (function(root, factory){
     if(typeof define === 'function' && define.amd){
         // AMD
@@ -30,7 +30,7 @@ My Plan, Simple JS Plugin Template which can be reused for my future project. I 
 
 Next, I have created a simple template for a plugin which can be used to create our own plugin.
 
-```text
+```
 (function(root, factory){
     if(typeof define === 'function' && define.amd){
         // AMD
@@ -144,6 +144,4 @@ Next, we also have some private Util functions. One of them is used to make sure
 
 We also have Event Handler Method that can be used to listen to event and type of element to run the code once the event fires.  For my module, I will be listening to mouseover and mouseleave to hide and show elements that are not video so that I can still use the video webpage when I want to change video or do other things in the page.
 
-Finally, init function which is exposed to the outside and which we can call to run our plugin.  
-
-
+Finally, init function which is exposed to the outside and which we can call to run our plugin.\
