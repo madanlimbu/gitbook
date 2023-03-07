@@ -47,7 +47,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *
  * @MigrateSource(
  *   id = "d7_group",
- *   source_module = "rct_migrate"
+ *   source_module = "group_migrate"
  * )
  */
 class D7GroupEntity extends FieldableEntity {
