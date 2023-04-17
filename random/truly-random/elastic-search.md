@@ -64,7 +64,7 @@ We can do search by requesting on `_search` endpoint. The results are structured
 
 There is no state in Elasticsearch between searches, however for usage like pagination we can use `from` & `size` parameters to get results from hits.&#x20;
 
-_**Note**: hits starts from `0` _&#x20;
+_**Note**: hits starts from `0`_&#x20;
 
 #### [Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) (Domain Specific Language)
 

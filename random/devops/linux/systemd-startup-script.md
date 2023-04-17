@@ -20,7 +20,7 @@ chmod 774 shared.sh
 
 #### **Next, we need to create systemd start up script.**
 
-Create systemd startup script like `systemdStartUpScript.service` then place it at `/etc/systemd/system` _****_&#x20;
+Create systemd startup script like `systemdStartUpScript.service` then place it at `/etc/systemd/system`&#x20;
 
 systemd script has basic structure like given below:
 

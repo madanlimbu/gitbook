@@ -263,9 +263,9 @@ _Again not to be confused with `React.createRef` which is created on every rende
 
 It can also be used with react `ref` attribute to hold the DOM node so we can reference it in future.&#x20;
 
-_Note: changing `.current` property doesn't cause a re-render like `useState` _&#x20;
+_Note: changing `.current` property doesn't cause a re-render like `useState`_&#x20;
 
-![Example of using ref with element (video)](../../../.gitbook/assets/screenshot-2020-08-15-at-12.16.11-am.png)
+![Example of using ref with element (video)](../../../../.gitbook/assets/screenshot-2020-08-15-at-12.16.11-am.png)
 
 Extra
 

@@ -40,6 +40,6 @@ _References_:\
 ### **Superposition, Thévenin and Norton**
 
 _References:_\
-__[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-002-circuits-and-electronics-spring-2007/video-lectures/lecture-3/](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-002-circuits-and-electronics-spring-2007/video-lectures/lecture-3/)\
+[https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-002-circuits-and-electronics-spring-2007/video-lectures/lecture-3/](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-002-circuits-and-electronics-spring-2007/video-lectures/lecture-3/)\
 [https://www.youtube.com/watch?v=4qEaI4FpYpw](https://www.youtube.com/watch?v=4qEaI4FpYpw)
 

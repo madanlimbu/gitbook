@@ -4,7 +4,7 @@
 
 * Clone opendialog locally`git clone git@github.com:opendialogai/opendialog.git`&#x20;
 * Install [lando](https://docs.lando.dev/basics/installation.html)  `brew cask install lando` _Note: If docker is already installed, make sure to factory reset settings before installing lando_
-* Run setup script `bash ./scripts/set_up_od.sh {appname}`  _Note: will be asked for input to reset/populate example data, Enter `yes` _&#x20;
+* Run setup script `bash ./scripts/set_up_od.sh {appname}`  _Note: will be asked for input to reset/populate example data, Enter `yes`_&#x20;
 * Once the script finishes running, visit [ https://{appname}.lndo.site/demo](https://opendialog.lndo.site/demo) where `{appname}` is the name we setup earlier, _Note: if `https` certificate is blocked from the browser & using http, Currently part of site resources will still point to https (e.g. `js` files) which will be blocked and fail the site from loading/functioning properly._
 
 #### Basic lando
