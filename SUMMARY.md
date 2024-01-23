@@ -43,6 +43,8 @@
     * [Django](learn/python-django/untitled/README.md)
       * [Tools](learn/python-django/untitled/tools.md)
       * [Overview](learn/python-django/untitled/overview.md)
+  * [ASP Net Core](learn/asp-net-core/README.md)
+    * [Notes](learn/asp-net-core/notes.md)
 * [Random](random/README.md)
   * [OAuth 2.0](random/oauth-2.0.md)
   * [Truly Random](random/truly-random/README.md)
