@@ -115,7 +115,7 @@ public string title { get; set; } = null!;
 
 There is lots of flexibility in terms of creating our own Validation attribute, Custom model validator, Custom model binding etc..
 
-View
+View (.cshtml)
 
 Razor template engine is used in .Net MVC, View consist of HTML with[ Razor markup](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-8.0). Razor syntax cann be used to write C# code.&#x20;
 
@@ -135,3 +135,22 @@ or
 @(Expression)
 ```
 
+We can pass data to Razor view using ViewData (Dictionary\<KeyValuePair\<string, obj>).
+
+&#x20;We can also use ViewBag which wraps around ViewBag and since ViewBag is of dynamic type; The data type check is done at run time so we don't have to type cast our data.
+
+The other way to pass data to View is using ViewModel (Strongly Typed View). A View will be bound to a specific ViewModel Class and type checked during compile time. This lets us leaverage intellisense during dev. Note, although a View will be bound to single Model, that model can still have properties that references to other view model class.
+
+```
+// Different approach in accessing data on view 
+
+(ViewData["key"] as ClassName).Property
+
+ViewBag.object_name.property
+
+@Model.property
+```
+
+View floder structure & resolution on runtime
+
+<figure><img src="../../.gitbook/assets/ViewResolution.png" alt=""><figcaption></figcaption></figure>
