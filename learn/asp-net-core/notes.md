@@ -41,7 +41,7 @@ Type of Extension avaialble&#x20;
 
 ## Routing
 
-.Net Core provides routing capability out of the box
+.Net Core provides routing capability out of the box ([https://learn.microsoft.com/en-us/aspnet/core/fundamentals/routing?view=aspnetcore-8.0](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/routing?view=aspnetcore-8.0))
 
 `UseRouting()`&#x20;
 
@@ -57,6 +57,20 @@ Type of Extension avaialble&#x20;
 
 &#x20;`UseStaticFiles()` - Map/Configure static files
 
+## MVC (Model, View, Controller)
+
+<figure><img src="../../.gitbook/assets/mvc (1).png" alt=""><figcaption></figcaption></figure>
+
+MVC is a common design pattern that can be used in different small to large project. This pattern helps in separating software domain/concerns/responsibilities into 3 different group.
+
+* Model - Represents how business data are modelled & handlled
+* View - how the things are displayed
+* Controller - Controls models & what view are dispalyed
+
+With .Net Core MVC framework, we can easily implement MVC pattern in .Net Projects.
+
+<figure><img src="../../.gitbook/assets/mvc flow.png" alt=""><figcaption></figcaption></figure>
+
 ## Controller
 
 * Classname Suffixed with "Controller" (i.e TestController)
@@ -71,6 +85,53 @@ Instead of manually adding a controller to service & maping them to a endpoint. 
 * `builder.Services.AddControllers()` - Adds all controller as service which can be later used for a specific endpoint
 * `app.MapControllers()` - Adds controller methods as endpoints so a specific route specified in attribute (i.e `[Route('/abc/')]` above method is mapped to it
 
-Action/Method on controller can return various type. Some of the useful ones extends the `IActionResult` interface.&#x20;
+Action/Method on controller can return various type, most of them extends `IActionResult` interface.&#x20;
 
 <figure><img src="../../.gitbook/assets/IActionResult.png" alt=""><figcaption></figcaption></figure>
+
+.Net core also provide model binding feature. It allows us to bind any request (query/route param, form-data ...) to a plain old c object.
+
+You can define which source data will be used for binding using attribute on Model Class itself or a specific property on it.
+
+```
+// Some Plain c# object Model class
+
+[FromQuery]
+public int? id { get; set; }
+```
+
+Model validation is also provided out of the box on .Net core. The model validation occurs after the Model binding. \
+However, a Model state that represents errors can come from either Model binding or Model validation.
+
+We can add a built-in or custom validation attributes to a property in model.
+
+```
+// Some model class
+
+[Required, ErrorMessage = "This is a required field..."]
+[StringLength(1000)]
+public string title { get; set; } = null!;
+```
+
+There is lots of flexibility in terms of creating our own Validation attribute, Custom model validator, Custom model binding etc..
+
+View
+
+Razor template engine is used in .Net MVC, View consist of HTML with[ Razor markup](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-8.0). Razor syntax cann be used to write C# code.&#x20;
+
+```
+// Razor code block
+@{
+    // c# or html code
+}
+```
+
+```
+// Razor expressions
+@Expression
+
+or 
+
+@(Expression)
+```
+
